@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Current Price</th>
+            <th>Total</th>
+        </thead>
+        <tbody>
+            {% for share in shares %}
+                <tr>
+                    <td>{{ share["symbol"] }}</td>
+                    <td>{{ share["shares"] }}</td>
+                    <td>{{ share["price"] | usd }}</td>
+                    <td>{{ share["total"] | usd }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="bold">
+        Current Cash in Wallet: {{ cash | usd }}
+    </div>
+
+    <div class="bold">
+        TOTAL: {{ total | usd }}
+    </div>
+{% endblock %}

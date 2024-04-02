@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Bubble Sort is the fastest option when trying to sort an already sorted array, since it only goes through the array once if no swaps are made — Ω(n).
+
+sort2 uses: Merge Sort
+
+How do you know?: Merge Sort is the fastest overall — O(n log n). Falls behind Bubble Sort in an already sorted array.
+
+sort3 uses: Selection Sort
+
+How do you know?: Selection Sort has similar speeds to Bubble Sort but falls behind in an already sorted array.

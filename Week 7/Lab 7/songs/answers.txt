@@ -1,0 +1,5 @@
+TODO 1: If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+Yellow. As described by Spotify, there's a energy balance that fuels their need.
+
+TODO 2: Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+There's more to music than danceability, energy and valence. More values are needed in order to precisely calculate the listener's "Audio Aura"

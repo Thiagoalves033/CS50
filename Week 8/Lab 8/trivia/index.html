@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                var buttons = document.querySelectorAll('#q1_buttons button');
+                buttons.forEach(function(button){
+                    button.addEventListener('click', function() {
+                        id = button.getAttribute('id');
+                        question_1 = document.getElementById('q1');
+
+                        if (id === 'dos2')
+                        {
+                            button.style.backgroundColor="green";
+                            question_1.innerHTML += "<br>Correct!";
+                        }
+                        else
+                        {
+                            button.style.backgroundColor="red";
+                            question_1.innerHTML += "<br>Incorrect!";
+                        }
+
+                        event.preventDefault();
+                    });
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').addEventListener('submit', function() {
+                    var answer = document.getElementById('input_id').value;
+                    var input = document.getElementById('input_id');
+                    question_2 = document.getElementById('q2');
+
+                    if(answer === 'Worm')
+                    {
+                        input.style.backgroundColor ="green";
+                        question_2.innerHTML += "<br>Correct!";
+                    }
+                    else
+                    {
+                        input.style.backgroundColor ="red";
+                        question_2.innerHTML += "<br>Incorrect!";
+                    }
+
+                    event.preventDefault();
+
+                    });
+                });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3 id="q1">Which of these is a game produced by Larian Studios?</h3>
+                <div id="q1_buttons">
+                    <button type="button" id="ffxiv">Final Fantasy XIV</button>
+                    <button type="button" id="lol">League of Legends</button>
+                    <button type="button" id="dos2">Divinity Original Sin 2</button>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3 id="q2">What is the name of the webnovel related to parahumans?</h3>
+                <form>
+                    <input id="input_id" autocomplete="off" placeholder="Answer" type ="text">
+                    <button type="submit">Answer</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
